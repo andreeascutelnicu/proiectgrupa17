@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Guest List</title>
+</head>
+<body>
+<h2>Guest List</h2>
+<table border="1">
+    <tr>
+        <th>CNP</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+    </tr>
+    <tr th:each="guest : ${guests}">
+        <td th:text="${guest.cnp}"></td>
+        <td th:text="${guest.firstName}"></td>
+        <td th:text="${guest.lastName}"></td>
+        <td th:text="${guest.phoneNumber}"></td>
+    </tr>
+</table>
+</body>
+</html>
